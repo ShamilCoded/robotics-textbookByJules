@@ -1,0 +1,176 @@
+[
+  {
+    "id": "intro.md-0",
+    "source": "intro.md",
+    "title": "intro",
+    "text": "# Physical AI & Humanoid Robotics"
+  },
+  {
+    "id": "intro.md-1",
+    "source": "intro.md",
+    "title": "intro",
+    "text": "**Focus and Theme:** AI Systems in the Physical World. Embodied Intelligence."
+  },
+  {
+    "id": "intro.md-2",
+    "source": "intro.md",
+    "title": "intro",
+    "text": "**Goal:** Bridging the gap between the digital brain and the physical body. Students apply their AI knowledge to control Humanoid Robots in simulated and real-world environments."
+  },
+  {
+    "id": "intro.md-4",
+    "source": "intro.md",
+    "title": "intro",
+    "text": "The future of AI extends beyond digital spaces into the physical world. This capstone quarter introduces Physical AI—AI systems that function in reality and comprehend physical laws. Students learn to design, simulate, and deploy humanoid robots capable of natural human interactions using ROS 2, Gazebo, and NVIDIA Isaac."
+  },
+  {
+    "id": "intro.md-5",
+    "source": "intro.md",
+    "title": "intro",
+    "text": "## Why Physical AI Matters"
+  },
+  {
+    "id": "intro.md-6",
+    "source": "intro.md",
+    "title": "intro",
+    "text": "Humanoid robots are poised to excel in our human-centered world because they share our physical form and can be trained with abundant data from interacting in human environments. This represents a significant transition from AI models confined to digital environments to embodied intelligence that operates in physical space."
+  },
+  {
+    "id": "intro.md-8",
+    "source": "intro.md",
+    "title": "intro",
+    "text": "1. Understand Physical AI principles and embodied intelligence\n2. Master ROS 2 (Robot Operating System) for robotic control\n3. Simulate robots with Gazebo and Unity\n4. Develop with NVIDIA Isaac AI robot platform\n5. Design humanoid robots for natural interactions\n6. Integrate GPT models for conversational robotics"
+  },
+  {
+    "id": "module-1.md-0",
+    "source": "module-1.md",
+    "title": "module-1",
+    "text": "# Module 1: The Robotic Nervous System (ROS 2)"
+  },
+  {
+    "id": "module-1.md-1",
+    "source": "module-1.md",
+    "title": "module-1",
+    "text": "**Focus:** Middleware for robot control."
+  },
+  {
+    "id": "module-1.md-2",
+    "source": "module-1.md",
+    "title": "module-1",
+    "text": "In this module, we focus on the foundational middleware that powers modern robotics."
+  },
+  {
+    "id": "module-1.md-3",
+    "source": "module-1.md",
+    "title": "module-1",
+    "text": "*   **ROS 2 Nodes, Topics, and Services**: Understanding the communication graph.\n*   **Bridging Python Agents to ROS controllers using rclpy**: Writing code to control the robot.\n*   **Understanding URDF (Unified Robot Description Format) for humanoids**: Modeling the robot's physical structure."
+  },
+  {
+    "id": "module-2.md-0",
+    "source": "module-2.md",
+    "title": "module-2",
+    "text": "# Module 2: The Digital Twin (Gazebo & Unity)"
+  },
+  {
+    "id": "module-2.md-1",
+    "source": "module-2.md",
+    "title": "module-2",
+    "text": "**Focus:** Physics simulation and environment building."
+  },
+  {
+    "id": "module-2.md-2",
+    "source": "module-2.md",
+    "title": "module-2",
+    "text": "Simulation is crucial for training robots safely before deploying them in the real world."
+  },
+  {
+    "id": "module-2.md-3",
+    "source": "module-2.md",
+    "title": "module-2",
+    "text": "*   **Simulating physics, gravity, and collisions in Gazebo**: Creating realistic physical interactions.\n*   **High-fidelity rendering and human-robot interaction in Unity**: Visualizing the robot in high quality.\n*   **Simulating sensors**:\n    *   LiDAR\n    *   Depth Cameras\n    *   IMUs"
+  },
+  {
+    "id": "module-3.md-0",
+    "source": "module-3.md",
+    "title": "module-3",
+    "text": "# Module 3: The AI-Robot Brain (NVIDIA Isaac™)"
+  },
+  {
+    "id": "module-3.md-1",
+    "source": "module-3.md",
+    "title": "module-3",
+    "text": "**Focus:** Advanced perception and training."
+  },
+  {
+    "id": "module-3.md-2",
+    "source": "module-3.md",
+    "title": "module-3",
+    "text": "Utilizing NVIDIA's powerful tools for AI in robotics."
+  },
+  {
+    "id": "module-3.md-3",
+    "source": "module-3.md",
+    "title": "module-3",
+    "text": "*   **NVIDIA Isaac Sim**: Photorealistic simulation and synthetic data generation.\n*   **Isaac ROS**: Hardware-accelerated VSLAM (Visual SLAM) and navigation.\n*   **Nav2**: Path planning for bipedal humanoid movement."
+  },
+  {
+    "id": "module-4.md-0",
+    "source": "module-4.md",
+    "title": "module-4",
+    "text": "# Module 4: Vision-Language-Action (VLA)"
+  },
+  {
+    "id": "module-4.md-1",
+    "source": "module-4.md",
+    "title": "module-4",
+    "text": "**Focus:** The convergence of LLMs and Robotics."
+  },
+  {
+    "id": "module-4.md-2",
+    "source": "module-4.md",
+    "title": "module-4",
+    "text": "Combining language models with physical actions."
+  },
+  {
+    "id": "module-4.md-3",
+    "source": "module-4.md",
+    "title": "module-4",
+    "text": "*   **Voice-to-Action**: Using OpenAI Whisper for voice commands.\n*   **Cognitive Planning**: Using LLMs to translate natural language (\"Clean the room\") into a sequence of ROS 2 actions.\n*   **Capstone Project**: The Autonomous Humanoid.\n    *   A final project where a simulated robot receives a voice command, plans a path, navigates obstacles, identifies an object using computer vision, and manipulates it."
+  },
+  {
+    "id": "weekly-breakdown.md-1",
+    "source": "weekly-breakdown.md",
+    "title": "weekly-breakdown",
+    "text": "## Weeks 1-2: Introduction to Physical AI\n*   Foundations of Physical AI and embodied intelligence\n*   From digital AI to robots that understand physical laws\n*   Overview of humanoid robotics landscape\n*   Sensor systems: LIDAR, cameras, IMUs, force/torque sensors"
+  },
+  {
+    "id": "weekly-breakdown.md-2",
+    "source": "weekly-breakdown.md",
+    "title": "weekly-breakdown",
+    "text": "## Weeks 3-5: ROS 2 Fundamentals\n*   ROS 2 architecture and core concepts\n*   Nodes, topics, services, and actions\n*   Building ROS 2 packages with Python\n*   Launch files and parameter management"
+  },
+  {
+    "id": "weekly-breakdown.md-3",
+    "source": "weekly-breakdown.md",
+    "title": "weekly-breakdown",
+    "text": "## Weeks 6-7: Robot Simulation with Gazebo\n*   Gazebo simulation environment setup\n*   URDF and SDF robot description formats\n*   Physics simulation and sensor simulation\n*   Introduction to Unity for robot visualization"
+  },
+  {
+    "id": "weekly-breakdown.md-4",
+    "source": "weekly-breakdown.md",
+    "title": "weekly-breakdown",
+    "text": "## Weeks 8-10: NVIDIA Isaac Platform\n*   NVIDIA Isaac SDK and Isaac Sim\n*   AI-powered perception and manipulation\n*   Reinforcement learning for robot control\n*   Sim-to-real transfer techniques"
+  },
+  {
+    "id": "weekly-breakdown.md-5",
+    "source": "weekly-breakdown.md",
+    "title": "weekly-breakdown",
+    "text": "## Weeks 11-12: Humanoid Robot Development\n*   Humanoid robot kinematics and dynamics\n*   Bipedal locomotion and balance control\n*   Manipulation and grasping with humanoid hands\n*   Natural human-robot interaction design"
+  },
+  {
+    "id": "weekly-breakdown.md-6",
+    "source": "weekly-breakdown.md",
+    "title": "weekly-breakdown",
+    "text": "## Week 13: Conversational Robotics\n*   Integrating GPT models for conversational AI in robots\n*   Speech recognition and natural language understanding\n*   Multi-modal interaction: speech, gesture, vision"
+  }
+]
