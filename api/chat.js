@@ -1,4 +1,7 @@
-export default async function handler(request, response) {
+// api/chat.js
+// Vercel Serverless Function (Node.js)
+
+module.exports = async function handler(request, response) {
   if (request.method !== 'POST') {
     return response.status(405).json({ error: 'Method not allowed' });
   }
@@ -29,7 +32,8 @@ export default async function handler(request, response) {
 
     // Simple Keyword Search (Mock RAG)
     if (!selectedText && bookContent.length > 0) {
-        const queryTerms = query.toLowerCase().split(/\s+/).filter(t => t.length > 3); // Only consider words > 3 chars
+        // Filter out very short words, but keep important acronyms like AI, ROS, VLA, GPT
+        const queryTerms = query.toLowerCase().split(/\s+/).filter(t => t.length > 1);
 
         if (queryTerms.length > 0) {
             // Score chunks by how many keywords they contain
@@ -84,4 +88,4 @@ export default async function handler(request, response) {
     console.error(error);
     return response.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};
