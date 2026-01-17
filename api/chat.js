@@ -71,7 +71,12 @@ module.exports = async function handler(request, response) {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = `You are a helpful teaching assistant for a Physical AI & Humanoid Robotics course.
-    Use the following context to answer the user's question. If the answer is not in the context, say you don't know, but try to be helpful based on general knowledge of the field if appropriate, but clarify it's not from the text.
+
+    Instructions:
+    1. Use the provided "Context" to answer the user's question.
+    2. If the answer is not in the "Context", you may answer using your general knowledge ONLY IF the question is strictly related to Physical AI, Humanoid Robotics, ROS 2, Simulation (Gazebo, Isaac Sim), Computer Vision, or AI programming.
+    3. If answering from general knowledge, briefly mention that the information is not from the course text.
+    4. If the question is unrelated to the course domain (e.g., cooking, pop culture, general chit-chat unrelated to learning), politely decline to answer and remind the user of your purpose.
 
     Context:
     ${context}
@@ -85,7 +90,14 @@ module.exports = async function handler(request, response) {
     return response.status(200).json({ answer: responseText });
 
   } catch (error) {
-    console.error(error);
-    return response.status(500).json({ error: 'Internal Server Error' });
+    console.error("Error in chat handler:", error);
+
+    const errorMessage = error.message || 'Unknown error';
+
+    if (errorMessage.includes('API key')) {
+        return response.status(401).json({ error: 'Invalid or missing API Key. Please check your GEMINI_API_KEY configuration.' });
+    }
+
+    return response.status(500).json({ error: errorMessage });
   }
 };
