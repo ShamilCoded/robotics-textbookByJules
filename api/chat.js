@@ -85,7 +85,14 @@ module.exports = async function handler(request, response) {
     return response.status(200).json({ answer: responseText });
 
   } catch (error) {
-    console.error(error);
-    return response.status(500).json({ error: 'Internal Server Error' });
+    console.error("Error in chat handler:", error);
+
+    const errorMessage = error.message || 'Unknown error';
+
+    if (errorMessage.includes('API key')) {
+        return response.status(401).json({ error: 'Invalid or missing API Key. Please check your GEMINI_API_KEY configuration.' });
+    }
+
+    return response.status(500).json({ error: errorMessage });
   }
 };
